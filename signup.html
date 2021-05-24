@@ -42,21 +42,21 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+    <link href="/public/style.css" rel="stylesheet">
   </head>
   <body class="text-center">
     
 <main class="form-signin">
-  <form>
+  <form action="/" method="POST">
     
     <!-- colocar aqui la ruta de la imagen del logo -->
     <!-- <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> --> 
     <h1 class="h3 mb-3 fw-normal">Sign Up to my Newsletter</h1>
 
     
-      <input type="text" class="form-control top" placeholder="First Name" required autofocus >
-      <input type="text" class="form-control middle"  required placeholder="Last Name">
-      <input type="email" class="form-control bottom" required placeholder="name@example.com">
+      <input type="text" class="form-control top" placeholder="First Name" name="fName" required autofocus >
+      <input type="text" class="form-control middle"  required placeholder="Last Name" name="lName">
+      <input type="email" class="form-control bottom" required placeholder="name@example.com" name="email">
   
    
     
