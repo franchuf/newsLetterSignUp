@@ -6,7 +6,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static("public")); 
 
 app.get("/", function(req,res){
-    console.log(__dirname)
+    console.log (__dirname)
     res.sendFile(__dirname + "/signup.html"); 
 })
 
@@ -17,7 +17,10 @@ app.post("/",function(req,res){
     console.log (firstName, lastName, email)
 })
 
-app.listen (3009, function(){
-     console.log("server running on port 3009")
+app.listen (5503, function(){
+     console.log("server running on port 5500")
  })
  
+
+
+
