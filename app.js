@@ -2,6 +2,7 @@ const express = require ("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const app = express ();
+const https = require ("https");
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static("public")); 
 
@@ -27,10 +28,10 @@ app.post("/",function(req,res){
         ]
     };
     const jsonData = JSON.stringify(data)
-    const url = "https://us6.api.mailchimp.com/3.0/lists/5f2efa8e62"
+    const url = "https://us6.api.mailchimp.com/3.0/lists/5f2efa8e62";
     const options = {
         method: "POST",
-        auth: "francho:8d95a13fea1643515f381d24dabb76b4-us6"
+        auth:"francho1:ead81448be86e014faed14377e4ea9f4-us6"
     }
     
     const request =  https.request(url, options,function (response){
@@ -53,7 +54,7 @@ app.listen (5503, function(){
 
 
 //API KEY
-// 8d95a13fea1643515f381d24dabb76b4-us6
+//ead81448be86e014faed14377e4ea9f4-us6
 
 //LIST ID
 //5f2efa8e62
