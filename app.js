@@ -48,13 +48,20 @@ app.post("/",function(req,res){
 
     })
 
+
+
     request.write(jsonData);
     request.end();
 
 })
 
-app.listen (5500, function(){
-     console.log("server running on port 5500")
+app.post("/failure", function(req, res){
+    res.redirect("/")
+});
+
+
+app.listen (process.env.PORT||3000, function(){
+     console.log("server running on port 3000")
  })
  
 
